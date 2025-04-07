@@ -5,7 +5,7 @@ import musiclibrary
 import requests # i used this to use the api to derive news from the api 
 from google import genai
 
-gapi="AIzaSyCrYWQPt7KfC-kuBiGev_4LXcdmHJN9698"
+gapi= # "USE YOUR GOOGLE GEMINI API "
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
 newsapi="41e19196ec69414c86f3191e6de823da"
@@ -19,7 +19,7 @@ def aiprocess(command):
                     print("JARVIS 2.0 Active ......")
                     audio = r.listen(source,timeout=8,phrase_time_limit=3)
                     command=r.recognize_google(audio)  
-    client = genai.Client(api_key="AIzaSyCrYWQPt7KfC-kuBiGev_4LXcdmHJN9698")
+    client = genai.Client(api_key= # "USE YOUR GOOGLE GEMINI API ")
 
     response = client.models.generate_content(
         model="gemini-2.0-flash", contents=f"You are a Virtual assistant name Jarvis and you will perform all the general tasks which I will command just like Alexa and Google don't introduce yourself just answer my command and and don't use any hash tags of hash symbols in conversion , now my command is {command}  "
